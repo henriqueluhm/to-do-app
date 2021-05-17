@@ -21,15 +21,15 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <div className="App">
         <GlobalStyle />
-        <div className="header">
+        <header className="header">
           <Header toggleTheme={toggleTheme} />
-        </div>
-        <div className="add">
+        </header>
+        <section className="add">
           <AddToDo toggleTheme={toggleTheme} />
-        </div>
-        <div className="your">
+        </section>
+        <section className="your">
           <YourToDos toggleTheme={toggleTheme} />
-        </div>
+        </section>
       </div>
     </ThemeProvider>
   );

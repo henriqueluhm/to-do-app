@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.section`
   height: calc(100vh - 5rem);
   width: 50vw;
   background: ${props => props.theme.colors.background};
@@ -25,7 +25,7 @@ export const Container = styled.div`
 
   } 
 
-  form {
+  .form {
     display:flex;
     width: 100%;
     padding-top: 3rem;
@@ -72,6 +72,5 @@ export const Container = styled.div`
     border: 3px solid #222;
   }
 
- 
   
 `;
