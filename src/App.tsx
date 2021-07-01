@@ -1,4 +1,3 @@
-import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import usePersistedState from './utils/usePersistedState';
 
@@ -8,7 +7,6 @@ import dark from './styles/themes/dark';
 import GlobalStyle from './styles/global';
 import Header from './components/Header/Header'
 import AddToDo from './components/AddToDo/AddToDo';
-import YourToDos from './components/YourToDos/YourToDos';
 
 const App = () => {
   const [theme, setTheme] = usePersistedState('theme', light);
@@ -26,9 +24,6 @@ const App = () => {
         </header>
         <section className="add">
           <AddToDo toggleTheme={toggleTheme} />
-        </section>
-        <section className="your">
-          <YourToDos toggleTheme={toggleTheme} />
         </section>
       </div>
     </ThemeProvider>

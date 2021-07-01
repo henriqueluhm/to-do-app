@@ -1,4 +1,3 @@
-import React from 'react'
 import { Container } from './styles';
 
 interface Props {
@@ -13,16 +12,10 @@ const TodoTask = ({ task, completeTask }: Props) =>  {
         <label className="custom-checkbox">
           <input type="checkbox" />
           <span className="checkmark"></span>
-
           <span className="label">{task}</span>
-
-          <button onClick={() => {
-          completeTask(task);
-          }
-        }>
-        -      
-      </button>
-
+          <button onClick={() => {completeTask(task)}}>
+            -    
+          </button>
         </label>
       </div>
     </Container>

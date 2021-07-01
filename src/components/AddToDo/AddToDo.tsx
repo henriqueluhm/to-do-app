@@ -1,15 +1,13 @@
-import React, { ChangeEvent, useContext, useState } from 'react';
-import { ThemeContext } from 'styled-components';
+import React, { ChangeEvent, useState } from 'react';
 
 import { Container } from './styles';
-import TodoTask from './TodoTask/TodoTask';
+import ToDoTask from '../ToDoTask/ToDoTask';
 
 interface Props {
   toggleTheme(): void;
 }
 
 const AddToDo: React.FC<Props> = ({ toggleTheme }) => {
-  const { colors, title } = useContext(ThemeContext);
 
   const [task, setTask] = useState<string>("");
   const [todoList, setTodoList] = useState<string[]>([]);
@@ -26,29 +24,37 @@ const AddToDo: React.FC<Props> = ({ toggleTheme }) => {
 
   const completeTask = (taskNameToDelete: string): void => {
     setTodoList(todoList.filter((task) => {
-      return task != taskNameToDelete;
+      return task !== taskNameToDelete;
     }
     ))
   };
   
   return (
     <Container>
-      <div>
-        <p> 
-          add something to do:
-        </p>
+      <div className="addYourToDos">
+        <div className="addTitle">
+          <p> 
+            add something to do:
+          </p>
+        </div>
+        <div className="form">
+            <input type="text" placeholder="add a task" value={task} onChange={handleChange} />
+            <button onClick={addTask}>+</button>        
+        </div>
       </div>
 
-      <div className="form">
-          <input type="text" placeholder="add a task" value={task} onChange={handleChange} />
-          <button onClick={addTask}>+</button>        
+      <div className="yourToDos">
+        <div className="yourTitle">
+          <p> 
+            your tasks for this day:
+          </p>
+        </div>
+        <div>
+          {todoList.map((task:string, key: number) => {
+            return <ToDoTask key={key} task={task} completeTask={completeTask}/>;
+          })}
+        </div>
       </div>
-      <div>
-        {todoList.map((task:string, key: number) => {
-          return <TodoTask key={key} task={task} completeTask={completeTask}/>;
-        })}
-      </div>
-
     </Container>      
   );
 }

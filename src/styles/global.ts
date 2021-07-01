@@ -25,20 +25,6 @@ export default createGlobalStyle`
     }
   }
 
-  .App {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 1.8fr 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-    "header header header header"
-    "add add your your"
-    "add add your your";
-  }
 
-  .header { grid-area: header; }
-  .add { grid-area: add; }
-  .your { grid-area: your; }
-  }
   
 `;

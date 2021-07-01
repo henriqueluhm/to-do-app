@@ -1,17 +1,19 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+margin-top: 20px;
+
 .check-box-group {
   display: flex;
   flex-direction: column;
-  margin: 2.5rem 4rem;
+  margin: 0 4rem;
 }
 
 .custom-checkbox {
   cursor: pointer;
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 .custom-checkbox .label {
@@ -20,8 +22,8 @@ export const Container = styled.div`
 }
 
 .custom-checkbox .checkmark {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   border: 2px solid #9b9b9b;
   display: inline-block;
   border-radius: 3px;
@@ -40,8 +42,8 @@ export const Container = styled.div`
 
 button {
   cursor: pointer;
-  width: 2.25rem;
-  height: 3rem;
+  width: 30px;
+  height: 35px;
   border-radius: 30px;
   border: 2px solid ${props => props.theme.colors.lines};
   font-size: 1.8rem;

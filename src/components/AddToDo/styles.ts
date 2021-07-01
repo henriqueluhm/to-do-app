@@ -1,28 +1,29 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  height: calc(100vh - 5rem);
-  width: 50vw;
+  width: 100vw;
   background: ${props => props.theme.colors.background};
   color: ${props => props.theme.colors.text};
   display: flex;
-  flex-direction: column;
-  padding: 15px;
-  border-right: 1px solid ${props => props.theme.colors.lines};
   transition: all linear 0.2s;
-  
- 
-  div {
+
+  .addYourToDos {
+    width: 50vw;
+    border-right: 1px solid ${props => props.theme.colors.lines};
+    height: calc(100vh - 5rem);
+  }
+
+  .addTitle {
     display: flexbox;
     align-items: flex-start;
     justify-content: center;
+    padding-top: 15px;
   }
 
   p {
-    border-bottom: 1px solid ${props => props.theme.colors.lines};
     height: 1.7rem;
     transition: all linear 0.2s;
-
+    border-bottom: 1px solid ${props => props.theme.colors.lines};
   } 
 
   .form {
@@ -70,6 +71,24 @@ export const Container = styled.section`
 
   input:hover {
     border: 3px solid #222;
+  }
+
+  .yourToDos {
+    height: calc(100vh - 5rem);
+    width: 50vw;
+
+    .yourTitle {
+      display: flexbox;
+      align-items: center;
+      justify-content: center;
+      padding-top: 15px;
+    }
+
+    p {
+      height: 1.7rem;
+      transition: all linear 0.2s;
+      border-bottom: 1px solid ${props => props.theme.colors.lines};
+    } 
   }
 
   
