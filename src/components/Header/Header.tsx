@@ -27,13 +27,13 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
         <DayNav open={open} onClick={() => setOpen(!open)}>
           <p>select a day:</p>
           <ul>
-            <li>Sunday</li>
-            <li>Monday</li>
-            <li>Tuesday</li>
-            <li>Wedsneday</li>
-            <li>Thursday</li>
-            <li>Friday</li>
-            <li>Saturday</li>
+            <li> <a href="#Sunday">Sunday</a> </li>
+            <li> <a href="#Monday">Monday</a> </li>
+            <li> <a href="#Tuesday">Tuesday</a> </li>
+            <li> <a href="#Wedsneday">Wedsneday</a> </li>
+            <li> <a href="#Thursday">Thursday</a> </li>
+            <li> <a href="#Friday">Friday</a> </li>
+            <li> <a href="#Saturday">Saturday</a> </li>
           </ul>
         </DayNav>
         </>

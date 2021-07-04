@@ -2,18 +2,18 @@ import { Container } from './styles';
 
 interface Props {
   task: string;
-  completeTask(taskNameToDelete: string): void;
+  deleteTask(taskNameToDelete: string): void;
 }
 
-const TodoTask = ({ task, completeTask }: Props) =>  { 
+const TodoTask = ({ task, deleteTask }: Props) =>  { 
   return (
     <Container>
       <div className="check-box-group">
         <label className="custom-checkbox">
           <input type="checkbox" />
           <span className="checkmark"></span>
-          <span className="label">{task}</span>
-          <button onClick={() => {completeTask(task)}}>
+          <span className="taskName">{task}</span>
+          <button onClick={() => {deleteTask(task)}}>
             -    
           </button>
         </label>

@@ -17,12 +17,11 @@ const AddToDo: React.FC<Props> = ({ toggleTheme }) => {
   };
 
   const addTask = (): void => {
-
-    setTodoList([...todoList, task]);
+    todoList.indexOf(task) === -1 ? todoList.push(task) : alert("This task already exists.");
     setTask("");
   }
 
-  const completeTask = (taskNameToDelete: string): void => {
+  const deleteTask = (taskNameToDelete: string): void => {
     setTodoList(todoList.filter((task) => {
       return task !== taskNameToDelete;
     }
@@ -51,7 +50,7 @@ const AddToDo: React.FC<Props> = ({ toggleTheme }) => {
         </div>
         <div>
           {todoList.map((task:string, key: number) => {
-            return <ToDoTask key={key} task={task} completeTask={completeTask}/>;
+            return <ToDoTask key={key} task={task} deleteTask={deleteTask}/>;
           })}
         </div>
       </div>

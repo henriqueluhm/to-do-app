@@ -10,18 +10,18 @@ margin-top: 20px;
 }
 
 .custom-checkbox {
-  cursor: pointer;
   display: flex;
   align-items: center;
   margin: 5px 0;
 }
 
-.custom-checkbox .label {
+.custom-checkbox .taskName {
   font-size: 1em;
-  margin: 0.5rem 1.5rem;
+  margin: 0.5rem 0.5rem;
 }
 
 .custom-checkbox .checkmark {
+  cursor: pointer;
   width: 28px;
   height: 28px;
   border: 2px solid #9b9b9b;

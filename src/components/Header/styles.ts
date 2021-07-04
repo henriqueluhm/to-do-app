@@ -89,6 +89,8 @@ export const DayNav = styled.nav<{ open: boolean }>`
   background-color: ${props => props.theme.colors.navFill};
   transition: all linear 0.2s;
 
+  
+
   p, li {
     color: ${props => props.theme.colors.text};
     transition: all linear 0.2s;
@@ -96,6 +98,15 @@ export const DayNav = styled.nav<{ open: boolean }>`
 
   p {
     text-align: center
+  }
+
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.colors.text};
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 
   li {
