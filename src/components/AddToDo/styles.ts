@@ -1,72 +1,68 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.section`
   width: 100vw;
-  background: ${props => props.theme.colors.background};
-  color: ${props => props.theme.colors.text};
+  background: ${(props) => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.text};
   display: flex;
   transition: all linear 0.2s;
 
   .addYourToDos {
     width: 50vw;
-    border-right: 1px solid ${props => props.theme.colors.lines};
+    border-right: 1px solid ${(props) => props.theme.colors.lines};
     height: calc(100vh - 5rem);
   }
 
   .addTitle {
-    display: flexbox;
-    align-items: flex-start;
+    display: flex;
     justify-content: center;
     padding-top: 15px;
   }
 
   p {
-    height: 1.7rem;
+    height: 1.6rem;
     transition: all linear 0.2s;
-    border-bottom: 1px solid ${props => props.theme.colors.lines};
-  } 
+    border-bottom: 1px solid ${(props) => props.theme.colors.lines};
+  }
 
-  .form {
-    display:flex;
+  .inputWrapper {
+    display: flex;
     width: 100%;
-    padding-top: 3rem;
+    padding-top: 1.75rem;
     justify-content: center;
   }
 
   input {
-    font-family: 'PT Mono', monospace;
-    border: 3px solid ${props => props.theme.colors.lines};
-    border-radius: 3px;
+    font-family: "PT Mono", monospace;
+    border: 2px solid ${(props) => props.theme.colors.lines};
+    border-radius: 5px;
     outline: none;
 
     height: 35px;
     width: 50%;
     padding: 16px;
 
-    transition: all linear 0.2s;
-
+    transition: all linear 0.1s;
   }
 
   button {
     margin-left: 3rem;
     cursor: pointer;
-    width: 8%;
-    border-radius: 30px;
-    border: 2px solid ${props => props.theme.colors.lines};
+    width: 50px;
+    border-radius: 25px;
+    border: 2px solid ${(props) => props.theme.colors.lines};
     font-size: 1.8rem;
-    background-color: ${props => props.theme.colors.lines};
+    background-color: ${(props) => props.theme.colors.lines};
     outline: none;
     color: #222;
-    
-    transition: all linear 0.2s;
 
+    transition: all linear 0.1s;
   }
 
   button:hover {
     background-color: #222;
     border: 2px solid #737373;
     color: #fff;
-
   }
 
   input:hover {
@@ -78,18 +74,15 @@ export const Container = styled.section`
     width: 50vw;
 
     .yourTitle {
-      display: flexbox;
-      align-items: center;
+      display: flex;
       justify-content: center;
       padding-top: 15px;
     }
 
     p {
-      height: 1.7rem;
+      height: 1.6rem;
       transition: all linear 0.2s;
-      border-bottom: 1px solid ${props => props.theme.colors.lines};
-    } 
+      border-bottom: 1px solid ${(props) => props.theme.colors.lines};
+    }
   }
-
-  
 `;
