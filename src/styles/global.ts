@@ -24,7 +24,4 @@ export default createGlobalStyle`
         font-size: 87.5%;
     }
   }
-
-
-  
 `;

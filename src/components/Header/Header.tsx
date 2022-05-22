@@ -1,50 +1,64 @@
-import React, { useState, useContext } from 'react'
-import Switch from 'react-switch';
-import { ThemeContext } from 'styled-components';
+import React, { useState, useContext } from "react";
+import Switch from "react-switch";
+import { ThemeContext } from "styled-components";
+import {
+  Container,
+  Logo,
+  CurrentDay,
+  ChooseMode,
+  StyledBurger,
+  LogoWrapper,
+  DayNav,
+} from "./styles";
 
-import { Container, Logo, CurrentDay, ChooseMode, StyledBurger, LogoWrapper, DayNav } from './styles';
+const weekDays: string[] = [
+  "sunday",
+  "monday",
+  "tuesday",
+  "wedsneday",
+  "thursday",
+  "friday",
+  "saturday",
+];
 
 interface Props {
-  toggleTheme(): void; 
+  toggleTheme(): void;
 }
 
 const Header: React.FC<Props> = ({ toggleTheme }) => {
   const { colors, title } = useContext(ThemeContext);
   const [open, setOpen] = useState(false);
+  const [currentDay, setCurrentDay] = useState<string>("monday");
 
   return (
     <Container>
       <LogoWrapper>
-        <Logo>
-          to do app
-        </Logo>
+        <Logo>to do app</Logo>
         <>
-        <StyledBurger open={open} onClick={() => setOpen(!open)}>
-          <div />
-          <div />
-          <div />
-        </StyledBurger>
-        <DayNav open={open} onClick={() => setOpen(!open)}>
-          <p>select a day:</p>
-          <ul>
-            <li> <a href="#Sunday">Sunday</a> </li>
-            <li> <a href="#Monday">Monday</a> </li>
-            <li> <a href="#Tuesday">Tuesday</a> </li>
-            <li> <a href="#Wedsneday">Wedsneday</a> </li>
-            <li> <a href="#Thursday">Thursday</a> </li>
-            <li> <a href="#Friday">Friday</a> </li>
-            <li> <a href="#Saturday">Saturday</a> </li>
-          </ul>
-        </DayNav>
+          <StyledBurger open={open} onClick={() => setOpen(!open)}>
+            <div />
+            <div />
+            <div />
+          </StyledBurger>
+          <DayNav open={open} onClick={() => setOpen(!open)}>
+            <p>select a day:</p>
+            <ul>
+              {weekDays.map((item) => (
+                <li>
+                  <a href={`#${item}`} onClick={() => setCurrentDay(item)}>
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </DayNav>
         </>
       </LogoWrapper>
-      <CurrentDay>
-        day: monday
-      </CurrentDay>
+      <CurrentDay>day: {currentDay}</CurrentDay>
       <ChooseMode>
         <Switch
           onChange={toggleTheme}
-          checked ={title === 'dark'}
+          checked={title === "dark"}
           checkedIcon={false}
           uncheckedIcon={false}
           height={10}
@@ -53,10 +67,10 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
           offColor={colors.text}
           onColor={colors.whiteColor}
           offHandleColor={colors.text}
-          />
+        />
       </ChooseMode>
-    </Container>       
+    </Container>
   );
-}
+};
 
 export default Header;
