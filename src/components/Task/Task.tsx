@@ -1,4 +1,4 @@
-import { Task } from "../AddToDo/AddToDo";
+import { Task } from "../AddTask/AddTask";
 import { Container } from "./styles";
 
 interface Props {
@@ -6,7 +6,7 @@ interface Props {
   deleteTask(taskNameToDelete: string): void;
 }
 
-const TodoTask = ({ task, deleteTask }: Props) => {
+const TaskContent = ({ task, deleteTask }: Props) => {
   return (
     <Container>
       <div className="check-box-group">
@@ -27,4 +27,4 @@ const TodoTask = ({ task, deleteTask }: Props) => {
   );
 };
 
-export default TodoTask;
+export default TaskContent;

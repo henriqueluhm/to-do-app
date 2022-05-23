@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import Switch from "react-switch";
 import { ThemeContext } from "styled-components";
-import AddToDo from "../components/AddToDo/AddToDo";
+import AddTask from "../components/AddTask/AddTask";
 import {
   Container,
   Logo,
@@ -73,7 +73,7 @@ const ToDoApp: React.FC<Props> = ({ toggleTheme }) => {
         </ChooseMode>
       </Container>
       <section className="add">
-        <AddToDo currentDay={currentDay} />
+        <AddTask currentDay={currentDay} />
       </section>
     </>
   );
