@@ -1,6 +1,6 @@
 # TO DO APP 📓
-Creating my first application alone, a classic to do app with some improvements, not finished yed. <br/>
-It will have a link after i make the deploy.
+My first application fully developed by myself, a classic to do app with some visual features and persisted data using localStorage. <br/>
+Link to play with it: https://to-do-app-29bf5.web.app/.
 <br/>
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/henriqueluhm/to-do-app/blob/main/LICENSE)
@@ -16,6 +16,7 @@ On the top part, there is a menu that allows the user to select the day of the w
   - React
   - TypeScript
   - styled-components
+  - Firebase (deploy and hosting).
 
 ## Simple Figma project:
 <img src="https://github.com/henriqueluhm/assets/blob/main/figmaproject.png" alt="figmaproject" height="550" width="850"/>
