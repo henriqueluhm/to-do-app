@@ -1,5 +1,5 @@
 # TO DO APP 📓
-My first application fully developed by myself, a classic to do app with some visual features and persisted data using localStorage. <br/>
+My first application fully developed by myself, a classic to do app with some visual features and persisted data using localStorage. (not finished) <br/>
 Link to play with it: https://to-do-app-29bf5.web.app/.
 <br/>
 
