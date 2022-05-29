@@ -10,8 +10,6 @@ Simple and easy to use to do app with a clean interface. It has a area where the
 The tasks will be submitted and it will appear in another area, where the person can mark with a checkmark if the task is done.
 On the top part, there is a menu that allows the user to select the day of the week to put new tasks, or check if its all good.
 
-## Tecnologias utilizadas:
-### Front-end:
   - HTML / CSS / JavaScript
   - React
   - TypeScript
